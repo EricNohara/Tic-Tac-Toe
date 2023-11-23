@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // GLOBAL SCOPE
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+// DOM selection
 const board = document.querySelector(".board");
 const sRowOne = document.querySelector(".strike-row-1");
 const sRowTwo = document.querySelector(".strike-row-2");
@@ -11,7 +11,7 @@ const sColTwo = document.querySelector(".strike-col-2");
 const sColThree = document.querySelector(".strike-col-3");
 const sDiagOne = document.querySelector(".strike-diag-1");
 const sDiagTwo = document.querySelector(".strike-diag-2");
-
+//State variables
 let playerOneTurn = true;
 let state = ["", "", "", "", "", "", "", "", ""];
 let turns = 0;
@@ -20,7 +20,7 @@ let turns = 0;
 // HELPER FUNCTIONS
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Function to check if there is a winner in the current board state, checking for each possibility
+// Function to check if there is a winner in the current board state, if so return the correct strike
 const isWinner = function () {
   if (state[0] === state[1] && state[0] === state[2] && state[0] !== "")
     return [true, sRowOne];
